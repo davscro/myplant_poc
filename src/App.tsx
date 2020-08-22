@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Text, View } from "react-native";
 // @ts-ignore
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -7,22 +6,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "native-base";
 import HomeScreen from "./screens/HomeScreen";
 import registerForPushNotifications from "./registerForPushNotifications";
-
-function Settings() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>About Screen</Text>
-    </View>
-  );
-}
-
-function History() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>History Screen</Text>
-    </View>
-  );
-}
+import Settings from "./screens/SettingsScreen";
+import { History } from "./screens/History";
 
 const Tab = createBottomTabNavigator();
 

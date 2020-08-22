@@ -1,10 +1,10 @@
 import { Text, View } from "react-native";
-import { Button, Content, Icon } from "native-base";
+import { Button, Content } from "native-base";
 import React, { useEffect, useState } from "react";
-import { AnimatedCircularProgress } from "react-native-circular-progress";
+
 import { firebaseInstance } from "../firebase_instance";
 import uuid from "uuid-random";
-import ProgressScreen from "../ProgressCircle";
+import ProgressScreen from "../components/ProgressCircle";
 
 type Sensor = {
   pumpIsRunning: boolean;
@@ -87,7 +87,7 @@ export default function HomeScreen() {
       >
         <ProgressScreen
           name={sensorData.timestamp}
-          percentage={sensorData.sensorTwo}
+          percentage={sensorData.sensorAvg}
           size={200}
           width={30}
         />

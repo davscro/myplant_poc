@@ -9,7 +9,8 @@ const firebaseConfig = {
   projectId: Constants.manifest.extra.firebase_projectId,
 };
 
-console.log("FB_CONFIG", firebaseConfig);
-
 // Get a reference to the database service
-export const firebaseInstance = firebase.initializeApp(firebaseConfig);
+const fbInstance = firebase.initializeApp(firebaseConfig);
+fbInstance.auth().signInAnonymously();
+
+export const firebaseInstance = fbInstance;

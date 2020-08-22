@@ -11,6 +11,11 @@ export default function ProgressScreen({
   name,
   size = 80,
   width = 10,
+}: {
+  percentage: number;
+  size?: number;
+  width?: number;
+  name: string;
 }) {
   return (
     <View style={{ alignContent: "center", alignItems: "center" }}>
